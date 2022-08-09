@@ -1,7 +1,8 @@
 package ru.gabaraev.jrmodule3.core;
 
-import ru.gabaraev.jrmodule3.dbemulate.DB;
-import ru.gabaraev.jrmodule3.dbemulate.DBEmulate;
+import ru.gabaraev.jrmodule3.dbemulate.DBActions;
+import ru.gabaraev.jrmodule3.dbemulate.DBState;
+import ru.gabaraev.jrmodule3.dbemulate.DBStory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,18 +17,18 @@ public class StartServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        DBEmulate db = DB.getInstance();
+        DBActions db = DBActions.getInstance();
+        DBState dbState = DBState.getInstance();
+        DBStory dbStory = DBStory.getInstance();
+
         HttpSession curSession = req.getSession();
 
         String name = req.getParameter("name");
 
         curSession.setAttribute("name", name);
 
-        //System.out.println(curSession.getAttribute("name"));
-
         req.setAttribute("name", curSession.getAttribute("name"));
-
-        req.getServletContext().getRequestDispatcher("/game.jsp").forward(req, resp);
+        req.getServletContext().getRequestDispatcher("/start.jsp").forward(req, resp);
 
     }
 }

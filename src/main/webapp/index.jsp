@@ -1,8 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page pageEncoding="UTF-8"%>
-<%@ page import="ru.gabaraev.jrmodule3.helpers.Helper" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<% Helper helper = new Helper(); %>
 <!DOCTYPE html>
 <html lang=ru>
 <head>
@@ -11,26 +9,26 @@
     <meta name="description" content="Финальный проект модуля 3 на JavaRush" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <title><%= helper.getDescription() %></title>
+    <title>JavaRushModule3</title>
 </head>
 <body>
 <div id="ajax-content" class="ajax-content" >
-    <p class="greetengs"><%= helper.getGreetings()%></p>
+    <p class="greetengs">Приветствую тебя игрок! Для начала приключения нажми кнопку!</p>
     <form>
         <p>Вводи свое имя и погнали!
             <input type="text" id="name" name="name" /></p>
-
-        <p>Submit button.
-
     </form>
     <button id="btn_Start" onclick="greet()" class="btn_Start">Старт!</button>
 </div>
+<hr>
+<div class="logger" id="logger">
 
+</div>
 <script>
     function greet () {
         let name = document.getElementById("name").value;
         $.ajax({
-            url: "<%= helper.getLinkToStart() %>",
+            url: "/start",
             type: "POST",
             dataType: "html",
             data: {"name" : name},
@@ -40,6 +38,18 @@
             }
         });
     }
+
+    $(document).ready(function(){
+        $.ajax({
+            url: "/logger",
+            type: "POST",
+            dataType: "html",
+            async: false,
+            success: function (data){
+                $("#logger").html(data);
+            }
+        });
+    });
 </script>
 
 </body>
