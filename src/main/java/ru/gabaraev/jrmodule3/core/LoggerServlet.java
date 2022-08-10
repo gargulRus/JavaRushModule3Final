@@ -13,7 +13,7 @@ public class LoggerServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        HttpSession curSession = req.getSession();
+        HttpSession curSession = req.getSession(true);
 
         if (curSession.getAttribute("gameCount") == null) {
             curSession.setAttribute("gameCount", 0);

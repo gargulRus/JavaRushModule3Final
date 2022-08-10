@@ -7,7 +7,7 @@
     ИД сессии - <%= session.getId() %>
 </p>
 <p>
-    Имя игрока - <c:out value="${sessionScope.name}"/>
+    Имя Мужика - <c:out value="${sessionScope.name}"/>
 </p>
 <p>
     Кол-во сыгранных игр - <c:out value="${sessionScope.gameCount}"/>

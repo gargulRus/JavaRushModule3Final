@@ -3,16 +3,20 @@
 <%@ page session="true" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<c:out value="${requestScope.story}"/>
-<form>
+<p class="">
+    <c:out value="${requestScope.story}"/>
+</p>
+<form class="form-control">
     <p>Выбери действие!</p>
-    <div>
+    <div class="">
         <c:choose>
             <c:when test="${actions != null}">
                 <c:forEach items="${actions}" var="action">
-                    <input type="radio" id="choice${action.key}"
-                           name="action" value="${action.key}">
-                    <label for="choice${action.key}">${action.value}</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="choice${action.key}"
+                               name="action" value="${action.key}">
+                        <label class="form-check-label" for="choice${action.key}">${action.value}</label>
+                    </div>
                 </c:forEach>
             </c:when>
             <c:otherwise>
@@ -21,13 +25,17 @@
 
                     </c:when>
                     <c:otherwise>
-                        <input type="radio" id="choice1"
-                               name="action" value="1">
-                        <label for="choice1">Пойти в зоо-магазин</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="choice1"
+                                   name="action" value="1">
+                            <label class="form-check-label" for="choice1">Пойти в зоо-магазин</label>
+                        </div>
 
-                        <input type="radio" id="choice2"
-                               name="action" value="2">
-                        <label for="choice2">Пойти в цветочный</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="choice2"
+                                   name="action" value="2">
+                            <label class="form-check-label" for="choice2">Пойти в цветочный</label>
+                        </div>
                     </c:otherwise>
                 </c:choose>
             </c:otherwise>
@@ -35,7 +43,10 @@
     </div>
 
 </form>
-<button id="btn_Start" onclick="getActions()" class="btn_Start">Вперед!</button>
+<div class="mt-2">
+    <button id="btn_Start" onclick="getActions()" class="btn btn-success btn_Start">Вперед!</button>
+</div>
+
 
 <script>
 
