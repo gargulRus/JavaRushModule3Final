@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+//Этот сервлет отвечает за формирование инфо-окошка
 @WebServlet(name = "LoggerServlet" , value = "/logger")
 public class LoggerServlet extends HttpServlet {
     @Override

@@ -11,11 +11,11 @@ public class DBActions{
         this.dbData.put(1, "Пойти в зоо-магазин");
         this.dbData.put(2, "Пойти в цветочный");
         this.dbData.put(3, "Купить кота");
-        this.dbData.put(4, "Поддаться и пойти на поводу у товарищей");
-        this.dbData.put(5, "Ты кремень! Идешь домой!");
-        this.dbData.put(6, "Даришь кота жене. А она хотела сережки. Тебе конец.");
+        this.dbData.put(4, "Пойти на поводу у товарищей");
+        this.dbData.put(5, "Мужик кремень! Идет домой!");
+        this.dbData.put(6, "Дарит кота жене, радуется.");
         this.dbData.put(7, "Попытаться увернуться от тапка");
-        this.dbData.put(8, "Тапок все же попал");
+        this.dbData.put(8, "Принять свою судьбу");
         this.dbData.put(9, "Купить гладиолусы");
         this.dbData.put(10, "Купить розы");
         this.dbData.put(11, "Поддаться и пойти на поводу у товарищей");

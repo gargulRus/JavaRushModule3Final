@@ -10,5 +10,5 @@
     Имя Мужика - <c:out value="${sessionScope.name}"/>
 </p>
 <p>
-    Кол-во сыгранных игр - <c:out value="${sessionScope.gameCount}"/>
+    День сурка, круг - <c:out value="${sessionScope.gameCount}"/>
 </p>

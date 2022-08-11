@@ -22,7 +22,7 @@ public class DBState {
         this.dbData.put(9, new ArrayList<Integer>(Arrays.asList(11)));
         this.dbData.put(10, new ArrayList<Integer>(Arrays.asList(12)));
         this.dbData.put(11, new ArrayList<Integer>(Arrays.asList()));
-        this.dbData.put(12, new ArrayList<Integer>(Arrays.asList(13)));
+        this.dbData.put(12, new ArrayList<Integer>(Arrays.asList()));
         this.dbData.put(13, new ArrayList<Integer>(Arrays.asList()));
     }
 

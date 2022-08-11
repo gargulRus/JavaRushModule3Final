@@ -6,23 +6,24 @@
 <p class="">
     <c:out value="${requestScope.story}"/>
 </p>
-<form class="form-control">
-    <p>Выбери действие!</p>
-    <div class="">
-        <c:choose>
-            <c:when test="${actions != null}">
-                <c:forEach items="${actions}" var="action">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" id="choice${action.key}"
-                               name="action" value="${action.key}">
-                        <label class="form-check-label" for="choice${action.key}">${action.value}</label>
-                    </div>
-                </c:forEach>
-            </c:when>
-            <c:otherwise>
-                <c:choose>
-                    <c:when test="${isEnd != null}">
 
+<c:choose>
+    <c:when test="${isEnd != null}">
+
+    </c:when>
+    <c:otherwise>
+        <form class="form-control">
+            <p>Выбери действие!</p>
+            <div class="">
+                <c:choose>
+                    <c:when test="${actions != null}">
+                        <c:forEach items="${actions}" var="action">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="choice${action.key}"
+                                       name="action" value="${action.key}">
+                                <label class="form-check-label" for="choice${action.key}">${action.value}</label>
+                            </div>
+                        </c:forEach>
                     </c:when>
                     <c:otherwise>
                         <div class="form-check">
@@ -38,13 +39,21 @@
                         </div>
                     </c:otherwise>
                 </c:choose>
-            </c:otherwise>
-        </c:choose>
-    </div>
+            </div>
 
-</form>
+        </form>
+    </c:otherwise>
+</c:choose>
 <div class="mt-2">
-    <button id="btn_Start" onclick="getActions()" class="btn btn-success btn_Start">Вперед!</button>
+    <c:choose>
+        <c:when test="${isEnd != null}">
+            <button id="btn_Start" onclick="getActions()" class="btn btn-success btn_Start">Заново!</button>
+        </c:when>
+        <c:otherwise>
+            <button id="btn_Start" onclick="getActions()" class="btn btn-success btn_Start">Вперед!</button>
+        </c:otherwise>
+    </c:choose>
+
 </div>
 
 
