@@ -3,7 +3,7 @@ package ru.gabaraev.jrmodule3.dbemulate;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DBActions{
+public class DBActions {
     private final Map<Integer, String> dbData = new HashMap<>();
     private static volatile DBActions db = null;
 
@@ -37,5 +37,9 @@ public class DBActions{
 
     public String getAction(Integer index) {
         return this.dbData.get(index);
+    }
+
+    public static DBActions getDb() {
+        return db;
     }
 }

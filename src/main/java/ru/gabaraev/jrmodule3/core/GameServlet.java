@@ -21,17 +21,13 @@ public class GameServlet extends HttpServlet {
     DBActions db = DBActions.getInstance();
     DBState dbState = DBState.getInstance();
     DBStory dbStory = DBStory.getInstance();
-
     Integer progress = 0;
-
     ArrayList<Integer> arrayOfActions;
-
     Map<Integer, String> actions;
-
     String story;
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+    @Override
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         HttpSession curSession = req.getSession();
 
@@ -40,7 +36,7 @@ public class GameServlet extends HttpServlet {
         if (req.getParameter("action") != null) {
             progress = Integer.parseInt(req.getParameter("action"));
             //Если action иммет определенное значение - значит это конец последовательности - Завершаем последовательность
-            if (progress == 4 || progress == 7 ||progress == 8 || progress == 11 || progress == 13) {
+            if (progress == 4 || progress == 7 || progress == 8 || progress == 11 || progress == 13) {
                 story = dbStory.getAction(progress);
                 Boolean isEnd = true;
                 progress = 0;
@@ -51,35 +47,29 @@ public class GameServlet extends HttpServlet {
                 req.setAttribute("isEnd", isEnd);
                 req.getServletContext().getRequestDispatcher("/game.jsp").forward(req, resp);
             } else {
-                generateResponce(req, resp);
+                generateResponse(req, resp);
             }
         } else {
-            System.out.println("Тут");
-            generateResponce(req, resp);
+            generateResponse(req, resp);
         }
     }
 
     //Метод для того, что бы избежать дублирования кода.
-    private void generateResponce (HttpServletRequest req, HttpServletResponse resp) {
+    private void generateResponse(HttpServletRequest req, HttpServletResponse resp) {
         try {
+
             arrayOfActions = dbState.getState(progress);
-
             actions = new HashMap<>();
-
             story = dbStory.getAction(progress);
 
             for (Integer action : arrayOfActions) {
                 actions.put(action, db.getAction(action));
             }
 
-            System.out.println(story);
-            System.out.println(progress);
-            System.out.println(actions.isEmpty());
-
             req.setAttribute("actions", actions);
             req.setAttribute("story", story);
-
             req.getServletContext().getRequestDispatcher("/game.jsp").forward(req, resp);
+
         } catch (Exception e) {
             e.printStackTrace();
         }

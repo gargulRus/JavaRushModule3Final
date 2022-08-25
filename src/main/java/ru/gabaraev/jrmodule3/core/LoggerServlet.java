@@ -12,7 +12,7 @@ import java.io.IOException;
 @WebServlet(name = "LoggerServlet" , value = "/logger")
 public class LoggerServlet extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         HttpSession curSession = req.getSession(true);
 

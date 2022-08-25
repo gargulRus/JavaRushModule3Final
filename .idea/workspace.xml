@@ -9,18 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="862eff48-2095-4432-afe8-b61c4c8c04f5" name="Changes" comment="Added CSS&#10;Delete IndexServlet.java">
+    <list default="true" id="862eff48-2095-4432-afe8-b61c4c8c04f5" name="Changes" comment="Update text&#10;Some little refactor">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/gabaraev/jrmodule3/core/GameServletTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/gabaraev/jrmodule3/core/LoggerServletTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/gabaraev/jrmodule3/core/StartServletTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/gabaraev/jrmodule3/dbemulate/DBActionsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/gabaraev/jrmodule3/dbemulate/DBStateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/gabaraev/jrmodule3/dbemulate/DBStoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/core/GameServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/core/GameServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/core/LoggerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/core/LoggerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/core/StartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/core/StartServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/dbemulate/DBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/dbemulate/DBActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/dbemulate/DBEmulate.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/dbemulate/DBState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/dbemulate/DBState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/dbemulate/DBStory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/dbemulate/DBStory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/gabaraev/jrmodule3/game/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/game.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/game.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/logger.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/logger.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +32,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -54,25 +57,120 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "File.Encoding"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Nikolay\IdeaProjects\JavaRushModule3Final\src\main\webapp\static" />
       <recent name="C:\Users\Gargul_\IdeaProjects\JavaRushModule3Final\src\main\webapp\static" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.gabaraev.jrmodule3.core" />
+      <recent name="ru.gabaraev.jrmodule3.dbemulate" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.gabaraev.jrmodule3.core" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.DBStoryTest.testGetDb">
+    <configuration name="DBActionsTest.testGetDb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaRushModule3Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.gabaraev.jrmodule3.dbemulate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.gabaraev.jrmodule3.dbemulate" />
+      <option name="MAIN_CLASS_NAME" value="ru.gabaraev.jrmodule3.dbemulate.DBActionsTest" />
+      <option name="METHOD_NAME" value="testGetDb" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBStateTest.testGetDb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaRushModule3Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.gabaraev.jrmodule3.dbemulate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.gabaraev.jrmodule3.dbemulate" />
+      <option name="MAIN_CLASS_NAME" value="ru.gabaraev.jrmodule3.dbemulate.DBStateTest" />
+      <option name="METHOD_NAME" value="testGetDb" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBStoryTest.testGetDb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaRushModule3Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.gabaraev.jrmodule3.dbemulate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.gabaraev.jrmodule3.dbemulate" />
+      <option name="MAIN_CLASS_NAME" value="ru.gabaraev.jrmodule3.dbemulate.DBStoryTest" />
+      <option name="METHOD_NAME" value="testGetDb" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartServletTest.testCorrectInitializationDBEmulate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaRushModule3Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.gabaraev.jrmodule3.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.gabaraev.jrmodule3.core" />
+      <option name="MAIN_CLASS_NAME" value="ru.gabaraev.jrmodule3.core.StartServletTest" />
+      <option name="METHOD_NAME" value="testCorrectInitializationDBEmulate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartServletTest.testSetCorrectAttributeNameToSession" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaRushModule3Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.gabaraev.jrmodule3.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.gabaraev.jrmodule3.core" />
+      <option name="MAIN_CLASS_NAME" value="ru.gabaraev.jrmodule3.core.StartServletTest" />
+      <option name="METHOD_NAME" value="testSetCorrectAttributeNameToSession" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.64" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.64" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -160,6 +258,15 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DBStoryTest.testGetDb" />
+        <item itemvalue="JUnit.DBStateTest.testGetDb" />
+        <item itemvalue="JUnit.DBActionsTest.testGetDb" />
+        <item itemvalue="JUnit.StartServletTest.testCorrectInitializationDBEmulate" />
+        <item itemvalue="JUnit.StartServletTest.testSetCorrectAttributeNameToSession" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -171,7 +278,8 @@
       <updated>1659779109691</updated>
       <workItem from="1659779112089" duration="19431000" />
       <workItem from="1659944456806" duration="31671000" />
-      <workItem from="1660218104412" duration="6228000" />
+      <workItem from="1660218104412" duration="6288000" />
+      <workItem from="1661415522509" duration="20639000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1659779459008</created>
@@ -194,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660135122537</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update text&#10;Some little refactor">
+      <created>1660226264685</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660226264685</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +330,19 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Draft development&#10;DB emulation done&#10;Scenario compiled&#10;Servlets are written" />
     <MESSAGE value="Added CSS&#10;Delete IndexServlet.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added CSS&#10;Delete IndexServlet.java" />
+    <MESSAGE value="Update text&#10;Some little refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update text&#10;Some little refactor" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.mock.web.MockServletContext" memberName="namedRequestDispatchers" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="((MockServletContext)((MockHttpSession)curSession).servletContext).attributes" custom="org.springframework.mock.web.MockHttpSession,org.springframework.mock.web.MockServletContext" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
