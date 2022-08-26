@@ -7,7 +7,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.mock.web.MockHttpSession;
-import ru.gabaraev.jrmodule3.core.GameServlet;
 import ru.gabaraev.jrmodule3.dbemulate.DBStory;
 
 import javax.servlet.ServletException;
